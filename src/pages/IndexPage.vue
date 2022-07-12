@@ -50,6 +50,7 @@
             class="text-h6"
             v-for="(item, index) in onFilterData"
             :key="index"
+            @click="onOpenDialog(item)"
           >
             <div>Name:{{ item?.name }}</div>
             <div>
@@ -76,6 +77,7 @@
             class="text-h6"
             v-for="(item, index) in onFilterData"
             :key="index"
+            @click="onOpenDialog(item)"
           >
             <div>Name:{{ item?.name }}</div>
             <div>
@@ -129,7 +131,6 @@ export default defineComponent({
       onFilterData.value = data.value.data;
     };
     const filterRocketData = (type) => {
-      console.log(data.value);
       if (type == 1) {
         onFilterData.value = data.value.data;
       } else if (type == 2) {

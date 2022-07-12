@@ -5,7 +5,9 @@
     </q-card-section>
 
     <q-card-section class="q-pt-none">
-      <div>Details:{{ detailRocket.details }}</div>
+      <div>
+        Details:{{ detailRocket.details ? detailRocket.details : "No Detail" }}
+      </div>
       <div>Rocket:{{ detailRocket.name }}</div>
       <div>
         Crew:{{ detailRocket.crew?.crew ? detailRocket.crew?.crew : "No crew" }}
